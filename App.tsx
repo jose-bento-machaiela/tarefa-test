@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, StatusBar, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, TouchableOpacity, Linking } from 'react-native';
 import React from 'react';
 
 // Icons Personalizados SVGR
@@ -7,6 +7,10 @@ import QrCodeIcon from './components/icons/QrCodeIcon';
 import SendIcon from './components/icons/SendIcon';
 import MenuIcon from './components/icons/MenuIcon';
 import ProfileIcon from './components/icons/ProfileIcon';
+
+const handlePress = () => {
+  Linking.openURL('https://paytesy.com/');
+}
 
 export default function App() {
   return (
@@ -38,21 +42,21 @@ export default function App() {
       {/* buttons */}
       <View style={styles.buttonContainer}>
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handlePress}>
             <SendIcon />
           </TouchableOpacity>
           <Text style={styles.buttonText}>Enviar</Text>
         </View>
 
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handlePress}>
           <AddIcon />
           </TouchableOpacity>
           <Text style={styles.buttonText}>Mais</Text>
         </View>
 
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handlePress}>
           <QrCodeIcon />
           </TouchableOpacity>
           <Text style={styles.buttonText}>Scan</Text>
