@@ -15,7 +15,7 @@ const handlePress = () => {
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar barStyle={'light-content'} backgroundColor={"#011729"} />
+      <StatusBar barStyle={'dark-content'} backgroundColor={"#011729"} />
 
       {/* header */}
       <View style={styles.header}>
