@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View, StatusBar, TouchableOpacity, Linking } from 'react-native';
 import React from 'react';
+import { StyleSheet, Text, View, StatusBar, TouchableOpacity, Linking } from 'react-native';
 
-// Icons Personalizados SVGR
+// Importação dos ícones personalizados
 import AddIcon from './components/icons/AddIcon';
 import QrCodeIcon from './components/icons/QrCodeIcon';
 import SendIcon from './components/icons/SendIcon';
@@ -15,11 +15,11 @@ const handlePress = () => {
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar barStyle={'dark-content'} backgroundColor={"#011729"} />
+      <StatusBar barStyle={'light-content'} backgroundColor={"#011729"} />
 
-      {/* header */}
+      {/* Header */}
       <View style={styles.header}>
-        <MenuIcon />
+        <MenuIcon testID="menu-icon" /> 
         <View style={styles.tabContainer}>
           <TouchableOpacity style={styles.activeTab}>
             <Text style={styles.activeTabText}>Minha Conta</Text>
@@ -28,10 +28,10 @@ export default function App() {
             <Text style={styles.inactiveTabText}>Meus Cofres</Text>
           </TouchableOpacity>
         </View>
-        <ProfileIcon />
+        <ProfileIcon testID="profile-icon" />
       </View>
 
-      {/* bank info */}
+      {/* Bank info */}
       <View style={styles.balanceContainer}>
         <Text style={styles.accountText}>Conta Particular - 851 626 827</Text>
         <View style={styles.balanceRow}>
@@ -39,39 +39,32 @@ export default function App() {
         </View>
       </View>
 
-      {/* buttons */}
+      {/* Buttons */}
       <View style={styles.buttonContainer}>
         <View>
           <TouchableOpacity onPress={handlePress}>
-            <SendIcon />
+            <SendIcon testID="send-icon" /> 
           </TouchableOpacity>
           <Text style={styles.buttonText}>Enviar</Text>
         </View>
 
         <View>
           <TouchableOpacity onPress={handlePress}>
-          <AddIcon />
+            <AddIcon testID="add-icon" />
           </TouchableOpacity>
           <Text style={styles.buttonText}>Mais</Text>
         </View>
 
         <View>
           <TouchableOpacity onPress={handlePress}>
-          <QrCodeIcon />
+            <QrCodeIcon testID="qr-code-icon" />
           </TouchableOpacity>
           <Text style={styles.buttonText}>Scan</Text>
         </View>
-
-
-        
-
-        
       </View>
     </View>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
