@@ -36,3 +36,10 @@ Os testes foram executados utilizando o Jest e alguns testes falharam.
 
 #### Teste Falho:
 - **✕** não deve renderizar o texto "Texto Errado" na tela
+
+
+![Resultado dos testes](assets/prints/print-01.png)
+
+![Detalhes do erro no teste](assets/prints/print-02.png)
+
+
