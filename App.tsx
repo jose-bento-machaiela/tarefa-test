@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar, TouchableOpacity, Linking } from 'react-native';
 
-// Importação dos ícones personalizados
 import AddIcon from './components/icons/AddIcon';
 import QrCodeIcon from './components/icons/QrCodeIcon';
 import SendIcon from './components/icons/SendIcon';
